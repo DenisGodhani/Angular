@@ -1,0 +1,14 @@
+D:\API\SchoolWebApi\SchoolWebApi\bin\Debug\netcoreapp2.1\SchoolWebApi.deps.json
+D:\API\SchoolWebApi\SchoolWebApi\bin\Debug\netcoreapp2.1\SchoolWebApi.runtimeconfig.json
+D:\API\SchoolWebApi\SchoolWebApi\bin\Debug\netcoreapp2.1\SchoolWebApi.runtimeconfig.dev.json
+D:\API\SchoolWebApi\SchoolWebApi\bin\Debug\netcoreapp2.1\SchoolWebApi.dll
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.csprojAssemblyReference.cache
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.csproj.CoreCompileInputs.cache
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.RazorAssemblyInfo.cache
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.RazorAssemblyInfo.cs
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.AssemblyInfoInputs.cache
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.AssemblyInfo.cs
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.RazorTargetAssemblyInfo.cache
+D:\API\SchoolWebApi\SchoolWebApi\bin\Debug\netcoreapp2.1\SchoolWebApi.pdb
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.dll
+D:\API\SchoolWebApi\SchoolWebApi\obj\Debug\netcoreapp2.1\SchoolWebApi.pdb
