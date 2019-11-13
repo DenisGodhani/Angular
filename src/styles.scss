@@ -2,6 +2,10 @@
 html,body{
     height: 100%;
 }
-
-html, body { height: 100%; }
+.navbar{
+    background-color: #3f51b5;
+    a{
+        color: white;
+    }
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

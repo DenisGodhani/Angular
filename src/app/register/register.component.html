@@ -18,16 +18,15 @@
                                 <input matInput placeholder="Last Name" [(ngModel)]="LastName" name="LastName" required>
                             </mat-form-field>
                         </div>
-                        <mat-label>Gender</mat-label>
-                        <mat-radio-group [(value)]="Gender">
-                            <mat-radio-button value="male">Male</mat-radio-button>
-                            <mat-radio-button value="female">Female</mat-radio-button>
-                        </mat-radio-group>
                         <br>
-                        <!-- <mat-form-field>
-                            <mat-label>Describe</mat-label>
-                            <textarea [(ngModel)]="Description" name="Description" matInput></textarea>
-                        </mat-form-field> -->
+                        <div class="d-flex">
+                            <mat-label class="w-50"><b>Gender</b></mat-label>
+                            <mat-radio-group [(value)]="Gender" class="w-50">
+                                <mat-radio-button value="male" class="mr-5">Male</mat-radio-button>
+                                <mat-radio-button value="female">Female</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                        <br>
                         <mat-form-field class="pr-4 w-50">
                             <mat-label>Date of Birth</mat-label>
                             <input [value]="date.value" matInput [matDatepicker]="myPicker" placeholder="date" required>
@@ -36,13 +35,59 @@
                         </mat-form-field>
                         <mat-form-field class="w-50">
                             <mat-label>Category</mat-label>
-                            <mat-select [(value)]="Category" placeholder="Category" (selectionChange)="onChange($event.value)">
+                            <mat-select [(value)]="Category" placeholder="Category"
+                                (selectionChange)="onChange($event.value)">
                                 <mat-option value="Student">Student</mat-option>
                                 <mat-option value="Parent">Parent</mat-option>
                                 <mat-option value="Teacher">Teacher</mat-option>
                             </mat-select>
                         </mat-form-field>
+                        <div class="d-flex" *ngIf="Category == 'Teacher'">
+                            <mat-form-field class="pr-4 mr-auto w-50">
+                                <input matInput placeholder="Degree" [(ngModel)]="Degree" name="Degree" required>
+                            </mat-form-field>
+                            <mat-form-field class="w-50">
+                                <input matInput placeholder="Experience" [(ngModel)]="Experience" name="Experience"
+                                    required>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field class="w-100" *ngIf="Category == 'Parent' || Category == 'Teacher'">
+                            <mat-label>Describe</mat-label>
+                            <textarea [(ngModel)]="Description" name="Description" matInput required></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="w-100" *ngIf="Category == 'Student'">
+                            <input matInput placeholder="Achivement" [(ngModel)]="Experience" name="Experience"
+                                required>
+                        </mat-form-field>
+                        <div class="d-flex" *ngIf="Category == 'Parent'">
+                            <mat-label class="mr-auto mt-3"><b>Children</b></mat-label>
+                            <div class="d-flex flex-column">
+                                <div *ngFor="let child of childs;let i=index">{{i + 1 }}.
+                                    <mat-form-field class="pr-4 mr-auto ml-1 w-40">
+                                        <input matInput placeholder="name" [(ngModel)]="ChildrenName[i]"
+                                            [ngModelOptions]="{standalone: true}" required>
+                                    </mat-form-field>
+                                    <mat-form-field class="w-40">
+                                        <input matInput placeholder="Age" [(ngModel)]="ChildrenAge[i]"
+                                            [ngModelOptions]="{standalone: true}" required>
+                                    </mat-form-field>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <mat-label class="mr-auto w-50"><b>Upload profile photo</b></mat-label>
+                            <div class="d-flex w-50 flex-column">
+                                <img [src]="imgURL" height="200" *ngIf="imgURL">
+                                <br>
+                                <span style="color:red;" *ngIf="message">{{message}}</span>
+                                <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+                                <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+                            </div>
+                        </div>
+
                     </form>
+                    <p>Already have account?<a [routerLink]="''"> Login</a></p>
                 </mat-card-content>
                 <mat-card-actions class="text-center">
                     <!-- put buttons here -->

@@ -1,29 +1,32 @@
 <div class="container-fluid h-100">
-        <div class="row justify-content-center h-100">
-          <div class="col-sm-4 my-auto">
-            <!-- Default form login -->
-            <form class="text-center border border-light p-5">
-      
-              <p class="h4 mb-4">Sign in</p>
-      
-              <!-- Email -->
-              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-      
-              <!-- Password -->
-              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-      
-              <!-- Sign in button -->
-              <button mdbBtn color="info" block="true" class="my-4" type="submit">Sign in</button>
-      
-              <!-- Register -->
-              <p>Not a member?
-                <a [routerLink]="'/Register'">Register</a>
-              </p>
-      
-            </form>
-            <!-- Default form login -->
-          </div>
+    <div class="row justify-content-center h-100">
+        <div class="col-sm-4 my-auto">
+            <mat-card>
+                <mat-card-header class="justify-content-center">
+                    <mat-card-title>Login</mat-card-title>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <!-- put the form here -->
+                    <form>
+                            <mat-form-field class="w-100">
+                                <input matInput placeholder="Username" [(ngModel)]="UserName" name="UserName"
+                                    required>
+                            </mat-form-field>
+                            <mat-form-field class="w-100">
+                                <input matInput placeholder="Password" [(ngModel)]="Password" name="Password" required>
+                            </mat-form-field>
+                        
+                    </form>
+                    <p>Not have an account?<a [routerLink]="'\Register'"> Register</a></p>
+                </mat-card-content>
+                <mat-card-actions class="text-center">
+                    <!-- put buttons here -->
+                    <button mat-raised-button (click)="saveContact()" color="primary">Login</button>
+                </mat-card-actions>
+            </mat-card>
         </div>
-        <!-- Content here -->
-      </div>
+    </div>
+    <!-- Content here -->
+</div>
       
